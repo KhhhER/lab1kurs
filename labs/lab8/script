@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./a.out < input.txt | diff -d tests.txt - && echo "OK"
