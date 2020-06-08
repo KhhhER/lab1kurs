@@ -1,0 +1,97 @@
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat f1.txt
+122344 tg frfre
+2f24f3 gr2f4
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat f2.txt
+122344 tg frfre
+2f24f3 gr2f4
+vrever
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cmp f1.txt f2.txt
+cmp: EOF в f1.txt после байта 29, строка 2
+
+Утилита осуществляет побайтовое сравнение содержимого двух указанных файлов. Выводит номера отличающихся строки и байта.
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ comm f1.txt f2.txt
+		122344 tg frfre
+		2f24f3 gr2f4
+	vrever
+
+Команда для сравнения двух текстовых файлов с отсортированными по алфавиту строками. На выход файлы поступают построчно в два столбца с обобщенными одинаковыми строками.
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ wc -L f2.txt
+15 f2.txt
+
+Утилита выводит длину наибольшей строки в полученном файле.
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ tail -n 2 f2.txt
+2f24f3 gr2f4
+vrever
+
+Команда для вывода 2 последних строк файла
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ ls | tee -i f3.txt
+f1.txt
+f2.txt
+f2.txt~
+#lab.txt#
+lab.txt
+lab.txt~
+
+Команда выводит на экран, или же перенаправляет выходной материал команды и копирует его в файл или в переменную.
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat f3.txt | tr 't' 'e'
+f1.exe
+f2.exe
+f2.exe~
+#lab.exe#
+lab.exe
+lab.exe~
+
+Команда служит для перевода (замены) выбранных символов в другие символы или удаления их.
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ od -b f4.txt
+0000000 061 064 065 064 063 040 064 061 065 064 063 040 061 064 063 062
+0000020 012
+0000021
+Данная команда преобразует содержимое файла в различные форматы
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ sum f4.txt
+59640     1
+
+Команда вычисляет и выводит 16-битную контрольную сумму для указанного файла, а также выдаёт количество блоков в файле
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ echo "012345" | cut -b 3
+2
+
+Команда cut вырезает из поступившего текста байт под номером 3
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ mc
+
+GNU Midnight Commander
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ head -c 3 f1.txt
+122cho@cho-Aspire-A315-41:~/labs2s/lab20$ head -c 10 f1.txt
+122344 tg
+
+Утилита позволяет просматривать начальные несколько символов файла.
+
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ split f3.txt -n 2
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ ls
+ f1.txt   f2.txt~   f4.txt       lab.txt    xaa
+ f2.txt   f3.txt   '#lab.txt#'   lab.txt~   xab
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat f3.txt
+f1.txt
+f2.txt
+f2.txt~
+#lab.txt#
+lab.txt
+lab.txt~
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat xaa
+f1.txt
+f2.txt
+f2.txt~
+#lcho@cho-Aspire-A315-41:~/labs2s/lab20$ cat xab
+ab.txt#
+lab.txt
+lab.txt~
+
+Данная утилита с ключём –n разбивает файл на 2 других файла

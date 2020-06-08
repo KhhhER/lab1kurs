@@ -1,0 +1,63 @@
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat f1.txt
+122344 tg frfre
+2f24f3 gr2f4
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat f2.txt
+122344 tg frfre
+2f24f3 gr2f4
+vrever
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cmp f1.txt f2.txt
+cmp: EOF в f1.txt после байта 29, строка 2
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ comm f1.txt f2.txt
+		122344 tg frfre
+		2f24f3 gr2f4
+	vrever
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ wc -L f2.txt
+15 f2.txt
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ tail -n 2 f2.txt
+2f24f3 gr2f4
+vrever
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ ls | tee -i f3.txt
+f1.txt
+f2.txt
+f2.txt~
+#lab.txt#
+lab.txt
+lab.txt~
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat f3.txt | tr 't' 'e'
+f1.exe
+f2.exe
+f2.exe~
+#lab.exe#
+lab.exe
+lab.exe~
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ od -b f4.txt
+0000000 061 064 065 064 063 040 064 061 065 064 063 040 061 064 063 062
+0000020 012
+0000021
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ sum f4.txt
+59640     1
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ echo "012345" | cut -b 3
+2
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ mc
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ head -c 3 f1.txt
+122cho@cho-Aspire-A315-41:~/labs2s/lab20$ head -c 10 f1.txt
+122344 tg cho@cho-Aspire-A315-41:~/labs2s/lab20$ split f3.txt -n 2
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ ls
+ f1.txt   f2.txt~   f4.txt       lab.txt    xaa
+ f2.txt   f3.txt   '#lab.txt#'   lab.txt~   xab
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat f3.txt
+f1.txt
+f2.txt
+f2.txt~
+#lab.txt#
+lab.txt
+lab.txt~
+cho@cho-Aspire-A315-41:~/labs2s/lab20$ cat xaa
+f1.txt
+f2.txt
+f2.txt~
+#lcho@cho-Aspire-A315-41:~/labs2s/lab20$ cat xab
+ab.txt#
+lab.txt
+lab.txt~
+

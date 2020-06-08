@@ -1,0 +1,6 @@
+f1.txt
+f2.txt
+f2.txt~
+#lab.txt#
+lab.txt
+lab.txt~
