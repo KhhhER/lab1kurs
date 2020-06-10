@@ -1,0 +1,69 @@
+\documentclass[a5paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[leqno]{amsmath}
+\usepackage{amssymb}
+\setcounter{page}{110}
+\usepackage[left=2.5cm,top=2.5cm,bottom=2cm]{geometry}
+\headsep=10pt
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\itshape \thepage}
+\fancyhead[CE]{\itshape Глава 8}
+\fancyhead[CO]{\itshape Функции, непрерывные в замкнутом интервале}
+
+\usepackage{pgfpages}
+ 
+\renewcommand{\headrulewidth}{0.1pt}
+\begin{document}
+
+ное число $x<\xi+\delta$ и не существует бесконечного числа \linebreak$x<\xi-\delta$. Но если бы тогда в $\Psi$ не имелось бесконечного \linebreakчисла $x$ таких, что\vspace{-mm}
+$$\xi-\delta<x<\xi+\delta,$$
+то, в силу теоремы 7, в $\Psi$  не имелось бы и бесконечного\linebreakчисла $x<\xi+\delta$.
+
+\vspace*{2mm}{\bfseries Теорема 130.} \itshape Пусть $a < b$ и
+$$\hspace{-10mm}a\leqslant \xi_n \leqslant b$$
+для всех целых $n\geqslant1$. \upshape(Числа $\xi_n -$ не обязательно различ-\linebreakные.) \itshape Тогда существует $\xi$ такое, что для каждого $\delta>0$\linebreakбесконечно часто \upshape(т.е. для бесконечного числа значений \itshape n\upshape)\vspace{-mm}
+$$\xi-\delta<\xi_n<\xi+\delta.$$
+
+\vspace*{2mm}{\bfseries Предварительное замечание.} При этом
+$$\hspace{-10mm}a\leqslant \xi \leqslant b.$$
+
+ \par\text{Д\thispace\thinspaceо\thispace\thinspaceк\thispace\thinspaceа\thispace\thinspaceз\thispace\thinspaceа\thispace\thinspaceт\thispace\thinspaceе\thispace\thinspaceл\thispace\thinspaceь\thispace\thinspaceс\thispace\thinspaceт\thispace\thinspaceв\thispace\thinspaceо}. 1) Если имеется бесконечное число \linebreak различных $\xi_n$, то требуемым свойством обладает каждое\linebreakчисло сгущения $\xi$ ограниченного бесконечного множества\linebreakразличных $\xi_n$; а согласно теореме 129  по крайней мере одно\linebreakтакое число сгущения существует;
+ 
+ 2) В противном случае, в силу теоремы 8, существует $\xi$\linebreakтакое, что бесконечно часто\vspace{-1mm}
+ $$\xi_n=\xi,$$
+ и требуемым свойством обладает это $\xi$.
+ 
+ \vspace*{2mm}{\bfseries Теорема 131.} \itshape Пусть множество чисел x ограничено\linebreak сверху. Тогда существует только одно l такое, что\linebreak
+ $$\hspace{-10mm}\text{\; \;каждое \; \;} x\leqslant l,$$
+ а для всякого $\delta>0$
+ $$\hspace{-10mm}\text{\; \;некоторое \; \;} x>l-\delta.$$\upshape
+ \par\text{Д\thispace\thinspaceо\thispace\thinspaceк\thispace\thinspaceа\thispace\thinspaceз\thispace\thinspaceа\thispace\thinspaceт\thispace\thinspaceе\thispace\thinspaceл\thispace\thinspaceь\thispace\thinspaceс\thispace\thinspaceт\thispace\thinspaceв\thispace\thinspaceо}. 1) Может существовать, самое\linebreakбольшое, одно такое \itshape l\upshape. Действительно, если бы \itshape $l_1$ \upshape и \itshape $l_2>l_1$\upshape\newpage
+оба обладали требуемыми свойствами, то мы имели бы, что\linebreak
+ $$\hspace{-10mm}\text{\; \;каждое \; \;} x\leqslant l_1$$
+ и, следовательно, полагая
+ $$\delta=l_2-l_1  (>0),$$
+ $-$что
+ $$\hspace{-10mm}\text{\; \;никакое \itshape x \upshape не\; \;} >l_1=l_2 - \delta.$$
+ \par2) Покажем теперь, что $l$ с требуемыми свойствами\linebreak существует. 
+ \par Отнесем $\alpha$
+ \parк первому классу, если некоторое $x\geqslant\alpha,$
+ \parко второму классу, если все $x<\alpha.$\\
+ В первом классе содержится некоторое $\alpha$, а именно,\linebreakкаждое $x$; согласно предположению, и во втором классе\linebreakсодержится некоторое $\alpha$. Если $\alpha$ лежит во втром классе и \linebreak$\beta>\alpha$, то
+ $$\hspace{-10mm}\text{\; \;каждое \; \;} x<\alpha<\beta,$$
+ так что и $\beta$ лежит во втором классе.
+ \parПоэтому существует $l$ такое, что каждое $\alpha<l$  принад-\linebreakлежит первому классу, а каждое $\alpha>l-$ второму.
+ \parЭто $l$ обладает требуемыми свойствами. Действительно:
+ \parа) Если бы существовало
+  $$\hspace{-10mm}\text{\; \;некоторое \; \;} x>l,$$
+  то $x$ принадлежало бы ко второму классу, и мы должны\linebreakбыли бы иметь
+  $$x<x.$$
+  Поэтому
+  $$\hspace{-10mm}\text{\; \;каждое \; \;} x \leqslant l.$$
+  \par b) Для каждого заданного $\delta>0$ число $l-\frac{\delta}{2}$ лежит во\linebreakвтором классе, и поэтому существует
+  $$\hspace{-10mm}\text{\; \;некоторое \; \;} x\geqslant l-\frac{\delta}{2}>l-\delta,$$
+  \vspace*{2mm}{\bfseries Примеры. } 1)Пусть $x-$ все числа $\leqslant c.$ Тогда $l=c$
+\end{document}
