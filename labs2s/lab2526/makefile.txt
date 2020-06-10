@@ -1,0 +1,15 @@
+#!usr\bin\bash
+CC = gcc
+LD = gcc 
+CCFLAGS = -g -Wall -pedantic -std=c99
+LDFLAGS =
+OBJ = main.o func.o
+.SUFFIXES: .c .o
+main: $(OBJ)
+	&(LD) $(LDFLAGS) -o main $(OBJ)
+main.o: main.c func.c
+.c.o:
+	$(CC) $(CCFLAGS) -c $< -o $@
+func.c: func.h
+clean:
+	rm -f *.o prog
